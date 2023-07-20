@@ -236,3 +236,241 @@ footer {
   background: rgb(233, 226, 125);
   border-radius: 5px;
 }
+@mixin flex($justify, $align) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+@mixin border($color) {
+  border: 1px solid $color;
+}
+@mixin readMore() {
+  color: black;
+  text-decoration: none;
+  font-size: smaller;
+  border-bottom: 3px solid $yellow;
+  &:hover {
+    border-color: rgb(230, 158, 24);
+  }
+}
+$yellow: rgb(255, 201, 25);
+$light-rectangle: rgba(118, 143, 134, 0.253);
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1vw;
+}
+header {
+  @include flex(space-between, center);
+  margin-bottom: 130px;
+  h1 {
+    text-transform: uppercase;
+    font-size: 80px;
+    margin: 20px;
+    font-family: "Oswald", sans-serif;
+    line-height: 80px;
+    position: relative;
+    #rectangle {
+      height: 95px;
+      width: 320px;
+      background-color: $yellow;
+      position: absolute;
+      top: 30px;
+      left: -15px;
+      z-index: -1;
+    }
+    #top-border {
+      height: 6px;
+      width: 120px;
+      background-color: black;
+      position: absolute;
+      top: -10%;
+    }
+  }
+  #container {
+    padding-left: 12vw;
+    width: 45vw;
+    #inside-container {
+      @include flex(space-between, start);
+      & > div {
+        width: 220px;
+        margin: 20px;
+      }
+      #p-1 a {
+        @include readMore();
+      }
+      #p-2 {
+        padding: 20px;
+        border-left: 3px solid $yellow;
+        font-style: oblique;
+        color: rgb(151, 146, 146);
+      }
+    }
+  }
+  img {
+    width: 38vw;
+    height: 72vh;
+    object-fit: cover;
+  }
+}
+#quote-container {
+  margin-bottom: 180px;
+  #quote {
+    width: 65vw;
+    margin: auto;
+    padding-left: 60px;
+    padding-top: 10px;
+    border-left: 4px solid $yellow;
+    position: relative;
+    h2 {
+      font-size: 30px;
+      font-family: "Oswald", sans-serif;
+      line-height: 30px;
+      margin: 15px;
+    }
+    #rectangle {
+      height: 300px;
+      width: 400px;
+      background-color: $light-rectangle;
+      position: absolute;
+      bottom: -50%;
+      right: 0%;
+      z-index: -1;
+    }
+  }
+}
+#pictures {
+  width: 76vw;
+  margin: auto;
+  img {
+    width: 18vw;
+    margin: 2px;
+  }
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+#options-container {
+  margin: 100px auto;
+  #options {
+    width: 69vw;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    & > div {
+      @include flex(center, center);
+      flex-direction: column;
+      width: 22vw;
+      text-align: center;
+      .icon {
+        height: 60px;
+      }
+      h3 {
+        font-size: 25px;
+        margin: 15px;
+        font-family: 'Oswald', sans-serif;
+      }
+      .description {
+        font-family: sans-serif;
+        // font-size: 12px;
+      }
+    }
+  }
+}
+#catalogue {
+  @include flex(center, center);
+  flex-wrap: wrap;
+  & > div {
+    width: calc(100vw / 2.03);
+    box-sizing: border-box;
+  }
+  img {
+    width: calc(100vw / 2.029);
+    aspect-ratio: 1;
+    object-fit: cover;
+  }
+  .para {
+    padding-left: 5vw;
+    h2{
+      font-size: 30px;
+      font-family: 'Oswald';
+      margin-bottom: 15px;
+      line-height: 30px;
+      position: relative;
+      width: 40vw;
+      .rectangle {
+        width: 13vw;
+        height: 70px;
+        background-color: $yellow;
+        position: absolute;
+        right: 0%;
+        top: -15%;
+        z-index: -1;
+      }
+    }
+    &:last-of-type {
+      .rectangle {
+        width: 17vw;
+      }
+    }
+    div {
+      margin-bottom: 25px;
+    }
+    a {
+      @include readMore();
+    }
+  }
+}
+#scd-quote-container{
+  margin: 100px 0;
+  #scd-quote {
+  width: 65vw;
+  margin: auto;
+  position: relative;
+  div {
+    width: 45vw;
+  }
+  h3 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 25px;
+  }
+  #rectangle {
+    background-color: $light-rectangle;
+    width: 35vw;
+    height: 23vw;
+    position: absolute;
+    right: -10%;
+    bottom: -40%;
+    z-index: -1;
+  }
+  img {
+    margin: 20px;
+  }
+  }
+}
+footer {
+  background-color: rgb(66, 64, 64);
+  margin-top: 150px;
+  height: 8vh;
+  font-size: 12px;
+  text-align: center;
+  color: white;
+  @include flex(center,center );
+  a {
+    color: $yellow;
+    text-decoration: none;
+  }
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: rgb(238, 235, 235);
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(196, 192, 143);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(233, 226, 125);
+  border-radius: 5px;
+}
