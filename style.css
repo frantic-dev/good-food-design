@@ -248,4 +248,254 @@ footer a {
 ::-webkit-scrollbar-thumb:hover {
   background: rgb(233, 226, 125);
   border-radius: 5px;
+}/*# sourceMappingURL=style.css.map */* {
+  padding: 0;
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1vw;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 130px;
+}
+header h1 {
+  text-transform: uppercase;
+  font-size: 80px;
+  margin: 20px;
+  font-family: "Oswald", sans-serif;
+  line-height: 80px;
+  position: relative;
+}
+header h1 #rectangle {
+  height: 95px;
+  width: 320px;
+  background-color: rgb(255, 201, 25);
+  position: absolute;
+  top: 30px;
+  left: -15px;
+  z-index: -1;
+}
+header h1 #top-border {
+  height: 6px;
+  width: 120px;
+  background-color: black;
+  position: absolute;
+  top: -10%;
+}
+header #container {
+  padding-left: 12vw;
+  width: 45vw;
+}
+header #container #inside-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+header #container #inside-container > div {
+  width: 220px;
+  margin: 20px;
+}
+header #container #inside-container #p-1 a {
+  color: black;
+  text-decoration: none;
+  font-size: smaller;
+  border-bottom: 3px solid rgb(255, 201, 25);
+}
+header #container #inside-container #p-1 a:hover {
+  border-color: rgb(230, 158, 24);
+}
+header #container #inside-container #p-2 {
+  padding: 20px;
+  border-left: 3px solid rgb(255, 201, 25);
+  font-style: oblique;
+  color: rgb(151, 146, 146);
+}
+header img {
+  width: 38vw;
+  height: 72vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#quote-container {
+  margin-bottom: 180px;
+}
+#quote-container #quote {
+  width: 65vw;
+  margin: auto;
+  padding-left: 60px;
+  padding-top: 10px;
+  border-left: 4px solid rgb(255, 201, 25);
+  position: relative;
+}
+#quote-container #quote h2 {
+  font-size: 30px;
+  font-family: "Oswald", sans-serif;
+  line-height: 30px;
+  margin: 15px;
+}
+#quote-container #quote #rectangle {
+  height: 300px;
+  width: 400px;
+  background-color: rgba(118, 143, 134, 0.253);
+  position: absolute;
+  bottom: -50%;
+  right: 0%;
+  z-index: -1;
+}
+
+#pictures {
+  width: 76vw;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+#pictures img {
+  width: 18vw;
+  margin: 2px;
+}
+
+#options-container {
+  margin: 100px auto;
+}
+#options-container #options {
+  width: 69vw;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+#options-container #options > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 22vw;
+  text-align: center;
+}
+#options-container #options > div .icon {
+  height: 60px;
+}
+#options-container #options > div h3 {
+  font-size: 25px;
+  margin: 15px;
+  font-family: "Oswald", sans-serif;
+}
+#options-container #options > div .description {
+  font-family: sans-serif;
+}
+
+#catalogue {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+#catalogue > div {
+  width: 49.2610837438vw;
+  box-sizing: border-box;
+}
+#catalogue img {
+  width: 49.2853622474vw;
+  aspect-ratio: 1;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#catalogue .para {
+  padding-left: 5vw;
+}
+#catalogue .para h2 {
+  font-size: 30px;
+  font-family: "Oswald";
+  margin-bottom: 15px;
+  line-height: 30px;
+  position: relative;
+  width: 40vw;
+}
+#catalogue .para h2 .rectangle {
+  width: 13vw;
+  height: 70px;
+  background-color: rgb(255, 201, 25);
+  position: absolute;
+  right: 0%;
+  top: -15%;
+  z-index: -1;
+}
+#catalogue .para:last-of-type .rectangle {
+  width: 17vw;
+}
+#catalogue .para div {
+  margin-bottom: 25px;
+}
+#catalogue .para a {
+  color: black;
+  text-decoration: none;
+  font-size: smaller;
+  border-bottom: 3px solid rgb(255, 201, 25);
+}
+#catalogue .para a:hover {
+  border-color: rgb(230, 158, 24);
+}
+
+#scd-quote-container {
+  margin: 100px 0;
+}
+#scd-quote-container #scd-quote {
+  width: 65vw;
+  margin: auto;
+  position: relative;
+}
+#scd-quote-container #scd-quote div {
+  width: 45vw;
+}
+#scd-quote-container #scd-quote h3 {
+  font-family: "Oswald", sans-serif;
+  font-size: 25px;
+}
+#scd-quote-container #scd-quote #rectangle {
+  background-color: rgba(118, 143, 134, 0.253);
+  width: 35vw;
+  height: 23vw;
+  position: absolute;
+  right: -10%;
+  bottom: -40%;
+  z-index: -1;
+}
+#scd-quote-container #scd-quote img {
+  margin: 20px;
+}
+
+footer {
+  background-color: rgb(66, 64, 64);
+  margin-top: 150px;
+  height: 8vh;
+  font-size: 12px;
+  text-align: center;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer a {
+  color: rgb(255, 201, 25);
+  text-decoration: none;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(238, 235, 235);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(196, 192, 143);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(233, 226, 125);
+  border-radius: 5px;
 }/*# sourceMappingURL=style.css.map */
